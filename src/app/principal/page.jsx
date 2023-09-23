@@ -1,9 +1,10 @@
 "use client";
+import UltimasMovimentacoes from '@/components/UltimasMovimentacoes';
 import { Box, Container, Unstable_Grid2 as Grid } from "@mui/material";
-import { OverviewDespesas } from "../../components/principal/overview/overview-despesas";
-import { OverviewGastosMesAtual } from "../../components/principal/overview/overview-gastos-mes-atual";
-import { OverviewReceitas } from "../../components/principal/overview/overview-receitas";
-import { OverviewSaldoGeral } from "../../components/principal/overview/overview-saldo-geral";
+import { OverviewDespesas } from "../../components/principal/overview/Overview-despesas";
+import { OverviewGastosMesAtual } from "../../components/principal/overview/Overview-gastos-mes-atual";
+import { OverviewReceitas } from "../../components/principal/overview/Overview-receitas";
+import { OverviewSaldoGeral } from "../../components/principal/overview/Overview-saldo-geral";
 
 export default function Principal() {
   return (
@@ -45,7 +46,9 @@ export default function Principal() {
                 value={"R$ 2.700,00"}
               />
             </Grid>
-            <Grid xs={12} lg={5}></Grid>
+            <Grid xs={12} lg={5}>
+              <UltimasMovimentacoes />
+            </Grid>
             <Grid xs={12} md={6} lg={4} sx={{ marginTop: 6 }}>
               <OverviewGastosMesAtual
                 chartSeries={[67.5, 32.5]}
