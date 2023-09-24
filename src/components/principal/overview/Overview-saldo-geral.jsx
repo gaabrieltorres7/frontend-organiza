@@ -20,6 +20,7 @@ export const OverviewSaldoGeral = (props) => {
             <Typography
               color="text.secondary"
               variant="overline"
+              className='font-bold'
             >
               Saldo Geral
             </Typography>

@@ -27,6 +27,7 @@ export const OverviewDespesas = (props) => {
               color="text.secondary"
               gutterBottom
               variant="overline"
+              className='font-bold'
             >
               Despesas
             </Typography>

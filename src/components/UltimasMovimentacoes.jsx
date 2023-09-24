@@ -3,7 +3,6 @@ import Link from "next/link";
 
 export default function UltimasMovimentacoes() {
   return (
-    <>
       <div className="relative flex flex-col min-w-0 break-words bg-white border-b border-solid shadow-xl dark:bg-slate-850 dark:shadow-dark-xl border-black-125 rounded-2xl bg-clip-border">
         <div className="p-4 pb-0 mb-0 rounded-t-4">
           <div className="flex justify-between">
@@ -111,7 +110,7 @@ export default function UltimasMovimentacoes() {
                 <td className="p-2 align-middle bg-transparent border-0 whitespace-nowrap"></td>
                 <td className="p-2 text-sm leading-normal align-middle bg-transparent border-0 whitespace-nowrap">
                   <div className="flex-1 flex justify-end items-center">
-                    <h6 className="mb-0 text-sm leading-normal text-green-600 mr-7">
+                    <h6 className="mb-0 text-sm leading-normal text-green-500 mr-7">
                       <Link href={"/receitas-e-despesas"}>
                         <ArrowRight height={24} />
                       </Link>
@@ -123,6 +122,5 @@ export default function UltimasMovimentacoes() {
           </table>
         </div>
       </div>
-    </>
   );
 }

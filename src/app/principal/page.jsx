@@ -1,5 +1,6 @@
 "use client";
-import UltimasMovimentacoes from '@/components/UltimasMovimentacoes';
+import BalancoGeral from "@/components/BalancoGeral";
+import UltimasMovimentacoes from "@/components/UltimasMovimentacoes";
 import { Box, Container, Unstable_Grid2 as Grid } from "@mui/material";
 import { OverviewDespesas } from "../../components/principal/overview/Overview-despesas";
 import { OverviewGastosMesAtual } from "../../components/principal/overview/Overview-gastos-mes-atual";
@@ -19,11 +20,11 @@ export default function Principal() {
         <Container maxWidth="xl">
           <Grid
             container
-            spacing={3}
+            spacing={6}
             justifyContent="center"
-            alignItems="center"
+            alignItems="flex-start" // Alinhe ao topo
           >
-            <Grid xs={12} sm={6} lg={3}>
+            <Grid item xs={12} sm={6} lg={3}>
               <OverviewSaldoGeral
                 difference={12}
                 positive
@@ -31,7 +32,7 @@ export default function Principal() {
                 value="R$ 9.000,00"
               />
             </Grid>
-            <Grid xs={12} sm={6} lg={3}>
+            <Grid item xs={12} sm={6} lg={3}>
               <OverviewReceitas
                 difference={16}
                 positive={false}
@@ -39,25 +40,28 @@ export default function Principal() {
                 value="R$ 4.000,00"
               />
             </Grid>
-            <Grid xs={12} sm={6} lg={3}>
+            <Grid item xs={12} sm={6} lg={3}>
               <OverviewDespesas
                 difference={12}
                 sx={{ height: "100%" }}
                 value={"R$ 2.700,00"}
               />
             </Grid>
-            <Grid xs={12} lg={5}>
-              <UltimasMovimentacoes />
+            <Grid item xs={12} lg={5}>
+              <Grid item xs={12} lg={5}>
+                <UltimasMovimentacoes />
+              </Grid>
+              <Grid item xs={12} lg={4} sx={{ mt: { md: 8 } }}>
+                <BalancoGeral />
+              </Grid>
             </Grid>
-            <Grid xs={12} md={6} lg={4} sx={{ marginTop: 6 }}>
+            <Grid item xs={12} md={6} lg={4}>
               <OverviewGastosMesAtual
                 chartSeries={[67.5, 32.5]}
                 labels={["Receita", "Despesa"]}
                 sx={{ height: "100%" }}
               />
             </Grid>
-            <Grid xs={12} md={6} lg={4}></Grid>
-            <Grid xs={12} md={12} lg={8}></Grid>
           </Grid>
         </Container>
       </Box>

@@ -19,6 +19,7 @@ export const OverviewReceitas = (props) => {
             <Typography
               color="text.secondary"
               variant="overline"
+              className='font-bold'
             >
               Receitas
             </Typography>
