@@ -24,7 +24,7 @@ export default function Principal() {
             justifyContent="center"
             alignItems="flex-start" // Alinhe ao topo
           >
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid xs={12} sm={6} lg={3}>
               <OverviewSaldoGeral
                 difference={12}
                 positive
@@ -32,7 +32,7 @@ export default function Principal() {
                 value="R$ 9.000,00"
               />
             </Grid>
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid xs={12} sm={6} lg={3}>
               <OverviewReceitas
                 difference={16}
                 positive={false}
@@ -40,22 +40,22 @@ export default function Principal() {
                 value="R$ 4.000,00"
               />
             </Grid>
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid xs={12} sm={6} lg={3}>
               <OverviewDespesas
                 difference={12}
                 sx={{ height: "100%" }}
                 value={"R$ 2.700,00"}
               />
             </Grid>
-            <Grid item xs={12} lg={5}>
-              <Grid item xs={12} lg={5}>
+            <Grid xs={12} lg={5}>
+              <Grid xs={12} lg={5}>
                 <UltimasMovimentacoes />
               </Grid>
-              <Grid item xs={12} lg={4} sx={{ mt: { md: 8 } }}>
+              <Grid xs={12} lg={4} sx={{ mt: 4 }}>
                 <BalancoGeral />
               </Grid>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid xs={12} md={6} lg={4}>
               <OverviewGastosMesAtual
                 chartSeries={[67.5, 32.5]}
                 labels={["Receita", "Despesa"]}
