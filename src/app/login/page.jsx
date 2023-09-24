@@ -1,11 +1,12 @@
 import Carousel from "@/components/Carousel";
+import Link from "next/link";
 
 export default function Login() {
 
   return (
     <>
       <div className="h-screen flex">
-        <div className="hidden lg:flex items-center justify-center w-1/3 bg-gradient-to-b from-green-800 to-green-300 ">
+        <div className="hidden lg:flex items-center justify-center w-1/3 bg-gradient-to-b from-custom1-green to-custom2-green ">
           <div className="w-screen">    
             <h1 className="fixed top-4 left-9 text-white text-4xl">Organiza</h1>
             <div className="p-5" >
@@ -15,7 +16,7 @@ export default function Login() {
         </div>
 
         <div className="lg:flex lg:w-2/3 w-screen justify-center items-center bg-white">
-          <div className="block lg:hidden bg-gradient-to-r from-green-800 to-green-300 p-4">
+          <div className="block lg:hidden bg-gradient-to-r from-custom1-green to-custom2-green p-4">
             <h1 className="text-4xl text-white">Organiza</h1>
           </div>
           <div className="p-7 h-auto bg-white">
@@ -34,25 +35,23 @@ export default function Login() {
               </div>
 
               <div className="mb-3 flex justify-center">            
-                <a href="#" className=" text-sm font-semibold text-green-700">Esqueceu sua senha?</a>
+                <a href="#" className=" text-sm font-semibold text-custom-green">Esqueceu sua senha?</a>
               </div>
 
               <div className="mb-3">
-                <button className="mb-1.5 block w-full text-center text-white bg-green-700 hover:bg-green-900 px-2 py-1.5 rounded-md">Iniciar sessão</button>
+                <button className="mb-1.5 block w-full text-center text-white bg-cor-button hover:bg-green-900 px-2 py-1.5 rounded-md">Iniciar sessão</button>
               </div>
             </form>
 
-            <div className="text-center mb-6
-            ">
+            <div className="text-center mb-6">
               <span className="text-xs text-gray-400 font-semibold">Não tem uma conta?</span>
-              <a href="#" className="text-xs border-b border-green-700  font-semibold text-green-700"> Criar conta</a>
+              <Link href="/cadastro" className="text-xs border-b border-green-700  font-semibold text-green-700"> Criar conta</Link>
             </div>
 
             <div className="block lg:hidden">          
             <Carousel />
+            </div>
           </div>
-          </div>
-
         </div>
       </div>
     </>
