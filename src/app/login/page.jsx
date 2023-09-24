@@ -52,7 +52,6 @@ export default function Login() {
             <Carousel />
             </div>
           </div>
-
         </div>
       </div>
     </>
