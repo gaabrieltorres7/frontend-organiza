@@ -1,5 +1,7 @@
 "use client";
 import BalancoGeral from "@/components/BalancoGeral";
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import UltimasMovimentacoes from "@/components/UltimasMovimentacoes";
 import { Box, Container, Unstable_Grid2 as Grid } from "@mui/material";
 import { OverviewDespesas } from "../../components/principal/overview/Overview-despesas";
@@ -10,6 +12,7 @@ import { OverviewSaldoGeral } from "../../components/principal/overview/Overview
 export default function Principal() {
   return (
     <>
+      <Header />
       <Box
         className={{ background: "#9C9C9C" }}
         sx={{
@@ -65,6 +68,7 @@ export default function Principal() {
           </Grid>
         </Container>
       </Box>
+      <Footer />
     </>
   );
 }
