@@ -7,10 +7,38 @@ module.exports = {
   ],
   theme: {
     extend: {
+
+      fontSize: {
+        '64': '4rem',
+      },
+
+      width: {
+        '1040': '65rem',
+      },
+
+      height: {
+        '688': '43rem',
+      },
+
+      textColor: {
+        'custom-green': '#218460',
+      },
+
+      backgroundColor: {
+        'cor-button': '#3B9373',
+        'cor-fundo': '#002216',
+      },
+
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+
+      gradientColorStops: {
+        'custom1-green': '#218460',
+        'custom2-green': '#1BC149',
+        'custom3-green': '#115267',
       },
     },
   },
