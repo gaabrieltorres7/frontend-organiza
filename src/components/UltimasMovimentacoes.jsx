@@ -24,8 +24,6 @@ export default function UltimasMovimentacoes() {
                     </div>
                   </div>
                 </td>
-                <td className="p-2 align-middle bg-transparent border-b whitespace-nowrap "></td>
-                <td className="p-2 align-middle bg-transparent border-b whitespace-nowrap "></td>
                 <td className="p-2 text-sm leading-normal align-middle bg-transparent border-b whitespace-nowrap ">
                   <div className="flex-1 text-center">
                     <h6 className="mb-0 text-sm leading-normal text-red-600">
@@ -44,8 +42,6 @@ export default function UltimasMovimentacoes() {
                     </div>
                   </div>
                 </td>
-                <td className="p-2 align-middle bg-transparent border-b whitespace-nowrap "></td>
-                <td className="p-2 align-middle bg-transparent border-b whitespace-nowrap "></td>
                 <td className="p-2 text-sm leading-normal align-middle bg-transparent border-b whitespace-nowrap ">
                   <div className="flex-1 text-center">
                     <h6 className="mb-0 text-sm leading-normal text-green-600">
@@ -64,8 +60,6 @@ export default function UltimasMovimentacoes() {
                     </div>
                   </div>
                 </td>
-                <td className="p-2 align-middle bg-transparent border-b whitespace-nowrap "></td>
-                <td className="p-2 align-middle bg-transparent border-b whitespace-nowrap "></td>
                 <td className="p-2 text-sm leading-normal align-middle bg-transparent border-b whitespace-nowrap ">
                   <div className="flex-1 text-center">
                     <h6 className="mb-0 text-sm leading-normal text-red-600">
@@ -76,7 +70,7 @@ export default function UltimasMovimentacoes() {
               </tr>
               <tr>
                 <td className="p-2 align-middle bg-transparent border-b w-3/10 whitespace-nowrap">
-                  <div className="flex items- center px-2 py-1">
+                  <div className="flex items-center px-2 py-1">
                     <div className="ml-6">
                       <h6 className="mb-0 text-sm leading-normal dark:text-black">
                         01/09/2023
@@ -84,8 +78,6 @@ export default function UltimasMovimentacoes() {
                     </div>
                   </div>
                 </td>
-                <td className="p-2 align-middle bg-transparent border-b whitespace-nowrap"></td>
-                <td className="p-2 align-middle bg-transparent border-b whitespace-nowrap"></td>
                 <td className="p-2 text-sm leading-normal align-middle bg-transparent border-b whitespace-nowrap">
                   <div className="flex-1 text-center">
                     <h6 className="mb-0 text-sm leading-normal text-green-600">
@@ -95,19 +87,17 @@ export default function UltimasMovimentacoes() {
                 </td>
               </tr>
               <tr>
-                <Link href={"/receitas-e-despesas"}>
                   <td className="p-2 align-middle bg-transparent border-0 w-3/10 whitespace-nowrap">
                     <div className="flex items-center px-2 py-1">
                       <div className="ml-6 items-center">
+                      <Link href={"/receitas-e-despesas"}>
                         <h6 className="mb-0 text-sm leading-normal text-green-500 font-bold">
                           Ir para a receitas e despesas
                         </h6>
+                      </Link>
                       </div>
                     </div>
                   </td>
-                </Link>
-                <td className="p-2 align-middle bg-transparent border-0 whitespace-nowrap"></td>
-                <td className="p-2 align-middle bg-transparent border-0 whitespace-nowrap"></td>
                 <td className="p-2 text-sm leading-normal align-middle bg-transparent border-0 whitespace-nowrap">
                   <div className="flex-1 flex justify-end items-center">
                     <h6 className="mb-0 text-sm leading-normal text-green-500 mr-7">
