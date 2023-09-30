@@ -1,21 +1,18 @@
 'use client'
-import MenuIcon from '@mui/icons-material/Menu';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
-import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
-import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import React from 'react';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import { AccountCircle, Brightness4, ExitToApp, Notifications } from '@mui/icons-material';
 
-
-const pages = ['Principal', 'Orçamento', 'Receitas e Despesas','Investimentos'];
-const settings = ['Perfil', 'Configuração de Notificação', 'Modo escuro', 'Sair'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -90,11 +87,23 @@ function Header() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <Box class='p-2'>
+                <Button href='/principal' style={{ display: 'block', color: 'black' }}>
+                  Painel Principal
+                </Button>
+
+                <Button href='/orcamento' style={{ display: 'block', color: 'black'  }}>
+                  Orçamento
+                </Button>
+
+                <Button href='/receitas-e-despesas' style={{ display: 'block', color: 'black'  }}>
+                  Receitas e Despesas
+                </Button>
+
+                <Button href='/investimentos' style={{ display: 'block', color: 'black'  }}>
+                  Inventimentos
+                </Button>
+              </Box>
             </Menu>
           </Box>
 
@@ -118,7 +127,8 @@ function Header() {
 
           <Box className="flex justify-between space-x-4" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
           
-          <Button className="hover:bg-green-700 px-4 py-2 font-semibold  text-black rounded"
+          <Button 
+          className="hover:bg-green-700 px-4 py-2 font-semibold  text-black rounded"
           href="/principal"
           onClick={handleCloseNavMenu}
           sx={{ my: 2, color: 'text.primary', display: 'block' }}
@@ -126,7 +136,8 @@ function Header() {
             Painel Principal
           </Button>
 
-          <Button className="hover:bg-green-700 px-4 py-2 font-semibold text-black rounded"
+          <Button 
+          className="hover:bg-green-700 px-4 py-2 font-semibold text-black rounded"
           href="/orcamento"
           onClick={handleCloseNavMenu}
           sx={{ my: 2, color: 'text.primary', display: 'block' }}
@@ -134,7 +145,8 @@ function Header() {
             Orçamento
           </Button>
 
-          <Button className="hover:bg-green-700 px-4 py-2 font-semibold  text-black rounded"
+          <Button 
+          className="hover:bg-green-700 px-4 py-2 font-semibold  text-black rounded"
           href="/receitas-e-despesas"
           onClick={handleCloseNavMenu}
           sx={{ my: 2, color: 'text.primary', display: 'block' }}
@@ -155,7 +167,7 @@ function Header() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Abrir configurações">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="User" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -174,19 +186,41 @@ function Header() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-  
-                </MenuItem>
-              ))}
+              <Box>
+                <Button style={{ display: 'flex', color: 'black' }}>
+                  <IconButton>
+                    <AccountCircle />
+                  </IconButton>
+                  Seu perfil
+                </Button>
+
+                <Button href='/notificacao' style={{ display: 'flex', alignItems: 'center', color: 'black' }}>
+                  <IconButton>
+                    <Notifications /> 
+                  </IconButton>
+                  Configuração de notificação
+                </Button>
+
+                <Button style={{ display: 'flex', alignItems: 'center', color: 'black' }}>
+                  <IconButton>
+                    <Brightness4 />
+                  </IconButton>
+                  Modo escuro
+                </Button>
+
+                <Button href="/" style={{ display: 'flex', color: 'black' }}>
+                  <IconButton>
+                    <ExitToApp /> 
+                  </IconButton>
+                  Sair
+                </Button>
+                </Box>
             </Menu>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
-    
-    
   );
 }
+
 export default Header;
