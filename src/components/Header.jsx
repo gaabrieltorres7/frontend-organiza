@@ -125,7 +125,7 @@ function Header() {
             <img src="/assets/organiza.png" alt="Logo-do-site" />
           </Typography>
 
-          <Box class="flex justify-between space-x-4" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
+          <Box className="flex justify-between space-x-4" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
           
           <Button 
           className="hover:bg-green-700 px-4 py-2 font-semibold  text-black rounded"
@@ -220,8 +220,7 @@ function Header() {
         </Toolbar>
       </Container>
     </AppBar>
-    
-    
   );
 }
+
 export default Header;
