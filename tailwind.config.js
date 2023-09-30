@@ -12,6 +12,15 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      backgroundColor: {
+        'bg-logado': '#EDEDED', // Adicione a cor de fundo personalizada aqui
+      },
+
+      colors: {
+        'text-error': '#933B3B',
+        'color-p2': '#00482E',
+      },
+
     },
   },
   plugins: [],
