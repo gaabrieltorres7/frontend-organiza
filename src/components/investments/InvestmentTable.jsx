@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
+import CurrencyInput from 'react-currency-input-field';
 import { Card, CardContent, Typography } from '@mui/material';
-
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -25,7 +24,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:nth-of-type(odd)': {
     backgroundColor: theme.palette.action.hover,
   },
-  // hide last border
   '&:last-child td, &:last-child th': {
     border: 0,
   },
@@ -34,8 +32,20 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 // Função para formatar a data no estilo "DD/MM/AAAA"
 const formatDate = (dateString) => {
   const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-  return new Date(dateString).toLocaleDateString(undefined, options);
+  return new Date(dateString).toLocaleDateString('pt-BR', options);
 };
+
+// Componente de formatação de moeda personalizado
+const CurrencyFormatter = ({ value }) => (
+  <CurrencyInput
+    value={value}
+    disabled={true}
+    allowDecimals={true}
+    decimalSeparator=","
+    groupSeparator="."
+    prefix="R$ "
+  />
+);
 
 const InvestmentTable = ({ investments }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -81,7 +91,9 @@ const InvestmentTable = ({ investments }) => {
               investments.map((investment, index) => (
                 <StyledTableRow key={index}>
                   <StyledTableCell className="border p-2">{investment.name}</StyledTableCell>
-                  <StyledTableCell className="border p-2">R$ {investment.value.toLocaleString('pt-BR')}</StyledTableCell>
+                  <StyledTableCell className="border p-2">
+                    <CurrencyFormatter value={investment.value} />
+                  </StyledTableCell>
                   <StyledTableCell className="border p-2">{investment.description}</StyledTableCell>
                   <StyledTableCell className="border p-2">{formatDate(investment.date)}</StyledTableCell>
                   <StyledTableCell className="border p-2">{investment.type}</StyledTableCell>
