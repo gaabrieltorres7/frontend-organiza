@@ -1,18 +1,18 @@
 'use client'
-import React, { useState } from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import { AccountCircle, Brightness4, ExitToApp, Notifications } from '@mui/icons-material';
+import MenuIcon from '@mui/icons-material/Menu';
 import { Hidden } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
+import React from 'react';
 
 
 function Header() {
@@ -90,7 +90,7 @@ function Header() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              <Box class='p-2'>
+              <Box className='p-2'>
                 <Button href='/principal' style={{ display: 'block', color: 'black' }}>
                   Painel Principal
                 </Button>

@@ -1,17 +1,17 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormHelperText from '@mui/material/FormHelperText';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
-import { Button, Card, IconButton, List, ListItem, ListItemSecondaryAction, ListItemText, Typography} from '@mui/material';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import { Button, Card, IconButton, List, ListItem, ListItemSecondaryAction, ListItemText, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
+import FormControl from '@mui/material/FormControl';
+import FormHelperText from '@mui/material/FormHelperText';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+import TextField from '@mui/material/TextField';
+import { useEffect, useState } from 'react';
 
 
 export default function ReceitasEDespesas() {
@@ -89,7 +89,7 @@ export default function ReceitasEDespesas() {
   return (
     <div>
         <Header/>
-      <h1 class="font-bold text-green-800 pl-10 text-xl mt-10 mb-3 text-center ">Adicionar novas receitas e despesas</h1>
+      <h1 className="font-bold text-green-800 pl-10 text-xl mt-10 mb-3 text-center ">Adicionar novas receitas e despesas</h1>
       <Box style={{display: 'flex', flexWrap: 'wrap', gap: '10px', alignItems: 'center', flexDirection: 'row', justifyContent: 'center' }}>
         <Card variant='outlined' sx={{ maxWidth: 'full', margin: '15px' }}>
       <FormControl sx={{ m: 1, minWidth: 150 }}>
