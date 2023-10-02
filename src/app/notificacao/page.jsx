@@ -302,8 +302,6 @@ export default function Home() {
                               onClick={handleCloseModal}
                             >
                               Cancel
-
-                              {/* oi */}
                             </button>
                           </div>
                         </form>
