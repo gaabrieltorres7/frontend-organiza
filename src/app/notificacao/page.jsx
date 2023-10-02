@@ -310,8 +310,7 @@ export default function Home() {
                         </form>
                       </div>
                     </div>
-                  </Dialog.Panel>
-                  
+                  </Dialog.Panel>                 
                 </Transition.Child>
               </div>
             </div>
