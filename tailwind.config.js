@@ -12,6 +12,7 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+<<<<<<< HEAD
       backgroundColor: {
         'bg-logado': '#EDEDED', // Adicione a cor de fundo personalizada aqui
       },
@@ -21,6 +22,8 @@ module.exports = {
         'color-p2': '#00482E',
       },
 
+=======
+>>>>>>> 774bc20 (parte de notificacao)
     },
   },
   plugins: [],

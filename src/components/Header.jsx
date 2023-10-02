@@ -12,7 +12,10 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import { AccountCircle, Brightness4, ExitToApp, Notifications } from '@mui/icons-material';
+<<<<<<< HEAD
 import { Hidden } from '@mui/material';
+=======
+>>>>>>> 774bc20 (parte de notificacao)
 
 
 function Header() {
@@ -60,7 +63,10 @@ function Header() {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+<<<<<<< HEAD
             <Hidden mdUp>
+=======
+>>>>>>> 774bc20 (parte de notificacao)
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -71,7 +77,10 @@ function Header() {
             >
               <MenuIcon />
             </IconButton>
+<<<<<<< HEAD
             </Hidden>
+=======
+>>>>>>> 774bc20 (parte de notificacao)
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -127,8 +136,13 @@ function Header() {
           >
             <img src="/assets/organiza.png" alt="Logo-do-site" />
           </Typography>
+<<<<<<< HEAD
             <Hidden smDown>
           <Box className="flex justify-jusify space-x-4" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
+=======
+
+          <Box className="flex justify-between space-x-4" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
+>>>>>>> 774bc20 (parte de notificacao)
           
           <Button 
           className="hover:bg-green-700 px-4 py-2 font-semibold  text-black rounded"
@@ -166,7 +180,10 @@ function Header() {
           </Button>
         
         </Box>
+<<<<<<< HEAD
         </Hidden>
+=======
+>>>>>>> 774bc20 (parte de notificacao)
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Abrir configurações">

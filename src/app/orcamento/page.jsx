@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React, { useState, useEffect } from "react";
 import { Card, FormControl, FormHelperText, Box,  Button, TextField, Container, Typography, Paper, Grid } from "@mui/material";
@@ -138,3 +139,13 @@ export default function Orcamento() {
     </div>
   );
 }
+=======
+export default function Orcamento() {
+
+  return (
+    <>
+      <p>Orcamento</p>
+    </>
+  )
+}
+>>>>>>> 774bc20 (parte de notificacao)

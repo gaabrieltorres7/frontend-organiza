@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState, useEffect } from 'react';
 import InputLabel from '@mui/material/InputLabel';
@@ -191,4 +192,13 @@ export default function ReceitasEDespesas() {
         <Footer/>
     </div>
   );
+=======
+export default function ReceitasEDespesas() {
+
+  return (
+    <>
+      <p>Receitas e Despesas</p>
+    </>
+  )
+>>>>>>> 774bc20 (parte de notificacao)
 }

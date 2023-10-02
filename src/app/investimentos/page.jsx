@@ -29,9 +29,15 @@ export default function Home() {
     <div >
       <Header />
       <div className="bg-bg-logado px-8 py-4 sm:px-40 sm:py-16">
+<<<<<<< HEAD
       <h1 className="text-2xl font-bold mb-4 text-color-p2 mb-8">Adicionar detalhes de investimentos</h1>
       <InvestmentForm onAddInvestment={handleAddInvestment} />
       <h2 className="text-2xl font-bold mt-4 text-color-p2 mb-8">Históricos de investimentos</h2>
+=======
+      <h1 className="text-2xl font-bold mb-4 text-p2-text mb-8">Adicionar detalhes de investimentos</h1>
+      <InvestmentForm onAddInvestment={handleAddInvestment} />
+      <h2 className="text-2xl font-bold mt-4 text-p2-text mb-8">Históricos de investimentos</h2>
+>>>>>>> 774bc20 (parte de notificacao)
       <InvestmentTable investments={investments} />
       </div>
       <Footer />
