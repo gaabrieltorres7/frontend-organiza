@@ -11,11 +11,7 @@ module.exports = {
 
       textColor: {
         'custom-green': '#218460',
-      },
-
-      backgroundColor: {
-        'cor-button': '#3B9373',
-      },
+      },     
 
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -29,7 +25,8 @@ module.exports = {
         'custom3-green': '#115267',                
       },
       backgroundColor: {
-        'bg-logado': '#EDEDED', // Adicione a cor de fundo personalizada aqui
+        'bg-logado': '#EDEDED',
+        'cor-button': '#3B9373',
       },
 
       colors: {
