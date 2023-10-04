@@ -29,12 +29,8 @@ module.exports = {
         'cor-button': '#3B9373',
         'cor-fundo': '#002216',
         'custom-green': '#218460',
-      },
-    extend: {
-
-      textColor: {
-        'custom-green': '#218460',
-      },     
+        'bg-logado': '#EDEDED',        
+      },            
 
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -46,18 +42,12 @@ module.exports = {
         'custom1-green': '#218460',
         'custom2-green': '#1BC149',
         'custom3-green': '#115267',                
-      },
-      backgroundColor: {
-        'bg-logado': '#EDEDED',
-        'cor-button': '#3B9373',
-      },
+      },      
 
       colors: {
         'text-error': '#933B3B',
         'color-p2': '#00482E',
-      },
-
-    },
+      },    
   },
   plugins: [
     require('flowbite/plugin')

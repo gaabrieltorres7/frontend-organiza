@@ -4,11 +4,22 @@ import Desenvolva from "@/components/home/Desenvolva";
 import HeaderC from "@/components/home/HeaderC";
 import SeuDinheiro from "@/components/home/SeuDinheiro";
 import LayoutAdmin from "@/components/login-cadastro/LayoutAdmin";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 export default function Home() {
+  const { status } = useSession()
+  const router = useRouter()
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.push("/principal")
+    }
+  }, [status, router])
+
   return (
-    <>
-      <LayoutAdmin>
+    <>     
         <HeaderC />
         <section>
           <div>
@@ -199,8 +210,7 @@ export default function Home() {
         </section>
         <SeuDinheiro />
         <Desenvolva />
-        <Footer />
-      </LayoutAdmin>
+        <Footer />      
     </>
   );
 }
