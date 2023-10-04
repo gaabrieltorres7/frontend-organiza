@@ -4,6 +4,7 @@ import { Card, FormControl, FormHelperText, Box,  Button, TextField, Container, 
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LayoutAdmin from "@/components/login-cadastro/LayoutAdmin";
 
 const cardStyle = {
   padding: "16px",
@@ -44,7 +45,7 @@ export default function Orcamento() {
   };
 
   return (
-    <div>
+    <LayoutAdmin>    
       <Header />
       <Container>
         <Grid container spacing={2} style={{ marginTop: "20px" }}>
@@ -135,6 +136,6 @@ export default function Orcamento() {
         </Grid>
       </Container>
       <Footer />
-    </div>
+    </LayoutAdmin>
   );
 }

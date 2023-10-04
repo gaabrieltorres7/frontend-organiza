@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import Carousel from "@/components/login-cadastro/Carousel";
-import Button from "@/components/login-cadastro/Button";
+import ButtonAuth from "@/components/login-cadastro/ButtonAuth";
 import Input from "@/components/login-cadastro/Input";
 import { Form, Formik } from "formik";
 import Link from "next/link";
@@ -15,11 +15,11 @@ export default function Cadastro() {
   const router = useRouter()
   const { status } = useSession()
 
-  // useEffect(() => {
-  //   if (status === "authenticated") {
-  //     router.push("/")
-  //   }
-  // }, [status, router])
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.push("/principal")
+    }
+  }, [status, router])
 
   const initialValues = {
     name: "",
@@ -106,7 +106,7 @@ export default function Cadastro() {
                       <Link href="/termos" className="text-xs border-b border-green-700  font-semibold text-green-700"> Termos e condições.</Link>
                     </div>
 
-                    <Button 
+                    <ButtonAuth 
                       type="submit" 
                       text={isFormSubmitting ? "Carregando..." : "Cadastre-se"}
                       disabled={isFormSubmitting} 
