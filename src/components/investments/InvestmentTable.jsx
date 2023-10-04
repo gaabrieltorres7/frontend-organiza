@@ -29,11 +29,13 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
+// Função para formatar a data no estilo "DD/MM/AAAA"
 const formatDate = (dateString) => {
   const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
   return new Date(dateString).toLocaleDateString('pt-BR', options);
 };
 
+// Componente de formatação de moeda personalizado
 const CurrencyFormatter = ({ value }) => (
   <CurrencyInput
     value={value}
@@ -45,23 +47,14 @@ const CurrencyFormatter = ({ value }) => (
   />
 );
 
-const calculateFutureValue = (initialValue, annualInterestRate, years) => {
-  const annualRate = 0.05;
-  const compoundPeriodsPerYear = 1;
-  const n = years * compoundPeriodsPerYear;
-  const r = annualRate / compoundPeriodsPerYear;
-  const futureValue = initialValue * Math.pow(1 + r, n);
-  // Arredonda o valor para o número inteiro mais próximo
-  return Math.round(futureValue);
-};
-
 const InvestmentTable = ({ investments }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Simule um tempo de carregamento para demonstração
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 2000); // Mude o valor conforme necessário
   }, []);
 
   return (
@@ -74,45 +67,39 @@ const InvestmentTable = ({ investments }) => {
             <StyledTableCell className="border p-2">Descrição</StyledTableCell>
             <StyledTableCell className="border p-2">Data</StyledTableCell>
             <StyledTableCell className="border p-2">Tipo</StyledTableCell>
-            <StyledTableCell className="border p-2">Rendimento Após 1 Ano</StyledTableCell>
-            <StyledTableCell className="border p-2">Rendimento Após 5 Anos</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {isLoading ? (
+          {isLoading ? ( // Verifica se os dados estão sendo carregados
             <TableRow>
-              <StyledTableCell colSpan={7}>
+              <StyledTableCell colSpan={5}>
                 <Typography variant="body1" className="text-center">
                   Carregando...
                 </Typography>
               </StyledTableCell>
             </TableRow>
-          ) : investments.length === 0 ? (
-            <TableRow>
-              <StyledTableCell colSpan={7}>
-                <Typography variant="body1" className="text-center">
-                  Sem registros
-                </Typography>
-              </StyledTableCell>
-            </TableRow>
           ) : (
-            investments.map((investment, index) => (
-              <StyledTableRow key={index}>
-                <StyledTableCell className="border p-2">{investment.name}</StyledTableCell>
-                <StyledTableCell className="border p-2">
-                  <CurrencyFormatter value={investment.value} />
+            investments.length === 0 ? ( // Verifica se não há registros
+              <TableRow>
+                <StyledTableCell colSpan={5}>
+                  <Typography variant="body1" className="text-center">
+                    Sem registros
+                  </Typography>
                 </StyledTableCell>
-                <StyledTableCell className="border p-2">{investment.description}</StyledTableCell>
-                <StyledTableCell className="border p-2">{formatDate(investment.date)}</StyledTableCell>
-                <StyledTableCell className="border p-2">{investment.type}</StyledTableCell>
-                <StyledTableCell className="border p-2">
-                  <CurrencyFormatter value={calculateFutureValue(investment.value, 0.05, 1)} />
-                </StyledTableCell>
-                <StyledTableCell className="border p-2">
-                  <CurrencyFormatter value={calculateFutureValue(investment.value, 0.05, 5)} />
-                </StyledTableCell>
-              </StyledTableRow>
-            ))
+              </TableRow>
+            ) : (
+              investments.map((investment, index) => (
+                <StyledTableRow key={index}>
+                  <StyledTableCell className="border p-2">{investment.name}</StyledTableCell>
+                  <StyledTableCell className="border p-2">
+                    <CurrencyFormatter value={investment.value} />
+                  </StyledTableCell>
+                  <StyledTableCell className="border p-2">{investment.description}</StyledTableCell>
+                  <StyledTableCell className="border p-2">{formatDate(investment.date)}</StyledTableCell>
+                  <StyledTableCell className="border p-2">{investment.type}</StyledTableCell>
+                </StyledTableRow>
+              ))
+            )
           )}
         </TableBody>
       </Table>
