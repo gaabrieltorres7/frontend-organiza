@@ -7,6 +7,29 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
+    extend: { 
+      fontSize: {
+        '64': '4rem',
+      },
+
+      width: {
+        '1040': '65rem',
+      },
+
+      height: {
+        '688': '43rem',
+      },
+
+      textColor: {
+        'custom-green': '#218460',
+        'cor-fundo': '#002216',
+      },
+
+      backgroundColor: {
+        'cor-button': '#3B9373',
+        'cor-fundo': '#002216',
+        'custom-green': '#218460',
+      },
     extend: {
 
       textColor: {
