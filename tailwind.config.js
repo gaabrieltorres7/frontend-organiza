@@ -39,11 +39,13 @@ module.exports = {
 
       textColor: {
         'custom-green': '#218460',
+        'cor-fundo': '#002216',
       },
 
       backgroundColor: {
         'cor-button': '#3B9373',
         'cor-fundo': '#002216',
+        'custom-green': '#218460',
       },
 
       backgroundImage: {
