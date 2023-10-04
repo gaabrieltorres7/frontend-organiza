@@ -1,4 +1,3 @@
-import React from "react"
 
 export default function Desenvolva() {
   return (
@@ -6,7 +5,7 @@ export default function Desenvolva() {
         <div className="relative">
           <svg className="hidden md:block mb-96" width="88" height="95" viewBox="0 0 88 95" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="47.5" cy="40" r="37" stroke="#5FB998" stroke-width="6" />
-            <path d="M40.5 54L3 91.5" stroke="white" stroke-width="6" stroke-linecap="round" />
+            <path d="M40.5 54L3 91.5" stroke="white" stroke-width="6" strokeLinecap="round" />
           </svg>
         </div>
 
