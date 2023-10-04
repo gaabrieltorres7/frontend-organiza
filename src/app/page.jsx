@@ -1,7 +1,9 @@
+"use client"
 import Footer from "@/components/Footer";
 import Desenvolva from "@/components/home/Desenvolva";
 import HeaderC from "@/components/home/HeaderC";
 import SeuDinheiro from "@/components/home/SeuDinheiro";
+import LayoutAdmin from "@/components/login-cadastro/LayoutAdmin"
 
 export default function Home() {
   return (
@@ -81,6 +83,9 @@ export default function Home() {
       <SeuDinheiro />
       <Desenvolva />
       <Footer />
-    </>
+    <LayoutAdmin>
+      <p className="text-purple-700 text-opacity-100">HOME</p>
+    </LayoutAdmin>
+   </>
   )
 }

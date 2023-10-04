@@ -4,6 +4,7 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     extend: { 
@@ -29,6 +30,11 @@ module.exports = {
         'cor-fundo': '#002216',
         'custom-green': '#218460',
       },
+    extend: {
+
+      textColor: {
+        'custom-green': '#218460',
+      },     
 
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -39,9 +45,21 @@ module.exports = {
       gradientColorStops: {
         'custom1-green': '#218460',
         'custom2-green': '#1BC149',
-        'custom3-green': '#115267',
+        'custom3-green': '#115267',                
       },
+      backgroundColor: {
+        'bg-logado': '#EDEDED',
+        'cor-button': '#3B9373',
+      },
+
+      colors: {
+        'text-error': '#933B3B',
+        'color-p2': '#00482E',
+      },
+
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }

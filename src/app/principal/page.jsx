@@ -8,10 +8,11 @@ import { OverviewDespesas } from "../../components/principal/overview/Overview-d
 import { OverviewGastosMesAtual } from "../../components/principal/overview/Overview-gastos-mes-atual";
 import { OverviewReceitas } from "../../components/principal/overview/Overview-receitas";
 import { OverviewSaldoGeral } from "../../components/principal/overview/Overview-saldo-geral";
+import LayoutAdmin from "@/components/login-cadastro/LayoutAdmin";
 
 export default function Principal() {
-  return (
-    <>
+  return (    
+    <LayoutAdmin>
       <Header />
       <Box
         className={{ background: "#9C9C9C" }}
@@ -69,6 +70,6 @@ export default function Principal() {
         </Container>
       </Box>
       <Footer />
-    </>
+    </LayoutAdmin>    
   );
 }
