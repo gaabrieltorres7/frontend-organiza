@@ -1,21 +1,22 @@
 'use client'
 import React from 'react';
+import Link from 'next/link';
 
 function HeaderC() {
   return (
-    <nav className=" border-gray-200 bg-custom-green">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between ml-14 p-5">
+    <nav className="bg-custom-green">
+      <div className="flex flex-wrap items-center justify-between ml-11  p-0 md:p-5 ">
         <a href="" class="flex items-center">
-          <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">Organiza</span>
+          <span className="self-center text-3xl font-semibold whitespace-nowrap text-white">Organiza</span>
         </a>
 
-        <div className="absolute top-auto right-24 w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-14 md:mt-0">
+        <div className="" >
+          <ul className="font-medium flex mr-2 p-4 md:p-0  ">
             <li>
-              <a href="/login" className="block py-2 pl-3 pr-4 text-white md:p-0 dark:text-white " aria-current="page">Login</a>
+              <Link href="/login" className="block py-2 pl-3 pr-4  text-white" aria-current="page">Login</Link>
             </li>
             <li>
-              <a href="/cadastro" className="block py-2 pl-3 pr-4 text-gray-900 rounded md:hover:bg-transparent md:border-0  md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent">Cadastre-se</a>
+              <Link href="/cadastro" className="block py-2 pl-3 pr-4 p rounded border-2 border-white text-white hover:bg-slate-300">Cadastre-se</Link>
             </li>
           </ul>
         </div>
