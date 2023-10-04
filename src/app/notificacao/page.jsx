@@ -1,5 +1,5 @@
 "use client"
-
+import LayoutAdmin from "@/components/login-cadastro/LayoutAdmin"
 import FullCalendar from "@fullcalendar/react"
 import dayGridPlugin from "@fullcalendar/daygrid"
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction"
@@ -10,6 +10,7 @@ import { CheckIcon, ExclamationTriangleIcon } from "@heroicons/react/20/solid"
 import Header from "@/components/Header"
 import { Head } from "next/document"
 import Footer from "@/components/Footer"
+
 
 export default function Home() {
   const [events, setEvents] = useState([
@@ -112,6 +113,7 @@ export default function Home() {
 
   return (
     <>
+        <LayoutAdmin>
     <Header/>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="grid grid-cols-10">
@@ -318,6 +320,7 @@ export default function Home() {
         </Transition.Root>
       </main>
       <Footer/>
+      </LayoutAdmin>
     </>
   )
 }
