@@ -30,7 +30,7 @@ export default function Home() {
 
         </div>
 
-        <div className="h-60 bg-cor-fundo flex justify-center items-center">
+        <div className="hidden h-60 bg-cor-fundo xl:flex justify-center items-center">
           <p className="text-2xl font-semibold text-center text-white mr-6 w-56">faça o seu cadastro</p>
 
           <svg className="mr-10" width="33" height="52" viewBox="0 0 33 52" fill="none" xmlns="http://www.w3.org/2000/svg">
