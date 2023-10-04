@@ -55,10 +55,10 @@ const InvestmentForm = ({ onAddInvestment }) => {
   <CardContent className="flex flex-wrap">
     <div className="w-full sm:w-1/2 px-2 mb-6">
       <div className="mb-2">
-        <div className='flex '>
+        <div className='flex w-full'>
            <img src="/icon-text.svg" className='mb-2 mr-1'/>
            <label className="mb-2 block text-sm font-semibold" 
-           >Nome do investimento</label>
+           >Nome</label>
         </div>
         <input
           type="text"
