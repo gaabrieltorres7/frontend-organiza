@@ -13,6 +13,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import React from 'react';
+import ButtonAuth from './login-cadastro/ButtonAuth';
+import { signOut, useSession } from "next-auth/react"
 
 
 function Header() {
@@ -212,12 +214,11 @@ function Header() {
                   Modo escuro
                 </Button>
 
-                <Button href="/" style={{ display: 'flex', color: 'black' }}>
-                  <IconButton>
-                    <ExitToApp /> 
-                  </IconButton>
-                  Sair
-                </Button>
+                <ButtonAuth
+                text="Sair"
+                className="bg-red-600 w-full h-10 text-white rounded px2 cursor-pointer"
+                onClick={() => signOut()}
+                />                
                 </Box>
             </Menu>
           </Box>

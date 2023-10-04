@@ -4,6 +4,7 @@ import InvestmentForm from '@/components/investments/InvestmentForm';
 import InvestmentTable from '@/components/investments/InvestmentTable';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import LayoutAdmin from '@/components/login-cadastro/LayoutAdmin';
 
 export default function Home() {
   const [investments, setInvestments] = useState([]);
@@ -26,7 +27,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div >
+    <LayoutAdmin>    
       <Header />
       <div className="bg-bg-logado px-8 py-4 sm:px-40 sm:py-16">
       <h1 className="text-2xl font-bold mb-4 text-color-p2 mb-8">Adicionar detalhes de investimentos</h1>
@@ -35,6 +36,6 @@ export default function Home() {
       <InvestmentTable investments={investments} />
       </div>
       <Footer />
-    </div>
+    </LayoutAdmin>
   );
 }

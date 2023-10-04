@@ -1,6 +1,6 @@
 "use client"
 import Carousel from "@/components/login-cadastro/Carousel";
-import Button from "@/components/login-cadastro/Button";
+import ButtonAuth from "@/components/login-cadastro/ButtonAuth";
 import Input from "@/components/login-cadastro/Input";
 import { Form, Formik } from "formik";
 import Link from "next/link";
@@ -15,11 +15,11 @@ export default function Login() {
   const [isFormSubmitting, setFormSubmitting] = useState(false)
   const { status } = useSession()
 
-  // useEffect(() => {
-  //   if (status === "authenticated") {
-  //     router.push("/")
-  //   }
-  // }, [status, router])
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.push("/principal")
+    }
+  }, [status, router])
 
    const initialValues = {
     email: "",
@@ -39,7 +39,7 @@ export default function Login() {
       signIn("Credentials", { email: values.email, password: values.password, redirect: false }).then(
         ({ error }) => {          
           if (!error) {
-            router.push("/")
+            router.push("/principal")
           } else {
             renderError(error.replace("Error:", ""))
             resetForm()
@@ -86,7 +86,7 @@ export default function Login() {
                   <Form noValidate>
                     <Input name="email" type="email" required/>
                     <Input name="password" type="password" required autoComplete="off"/>
-                    <Button 
+                    <ButtonAuth 
                       type="submit" 
                       text={isFormSubmitting ? "Carregando..." : "Iniciar sessão"}
                       disabled={isFormSubmitting} 

@@ -1,6 +1,7 @@
 "use client";
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import LayoutAdmin from '@/components/login-cadastro/LayoutAdmin';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { Button, Card, IconButton, List, ListItem, ListItemSecondaryAction, ListItemText, Typography } from '@mui/material';
@@ -87,7 +88,7 @@ export default function ReceitasEDespesas() {
 
 
   return (
-    <div>
+    <LayoutAdmin>    
         <Header/>
       <h1 className="font-bold text-green-800 pl-10 text-xl mt-10 mb-3 text-center ">Adicionar novas receitas e despesas</h1>
       <Box style={{display: 'flex', flexWrap: 'wrap', gap: '10px', alignItems: 'center', flexDirection: 'row', justifyContent: 'center' }}>
@@ -189,6 +190,6 @@ export default function ReceitasEDespesas() {
 
       
         <Footer/>
-    </div>
+  </LayoutAdmin>
   );
 }
